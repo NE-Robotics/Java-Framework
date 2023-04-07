@@ -14,3 +14,7 @@ An opensource FRC java framework to make blending simulated &amp; real robot cod
 - Easy testing without your robot with work done in simulation transfering easily to the real bot.
 - A simple starting point for advanced features for newer teams.
 - Full support from Northeastern Robotics, if tou struggle with this code you can contact us at any time.
+
+## Getting Started
+To begin with this framework just clone the repository & navigate to Rio/.wpilib/wpilib_preferences.json and set the team number to match your own.
+If you are using WPILib vscode you may want to open teh Rio folder while writing robot code instead of the primary folder as the FRC vscode extension does not always function properly if not in the correct directory.
