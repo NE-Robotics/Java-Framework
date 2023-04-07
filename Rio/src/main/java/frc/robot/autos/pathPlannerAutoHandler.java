@@ -29,6 +29,9 @@ public class pathPlannerAutoHandler {
     RamseteAutoBuilder autoBuilder;
     HashMap<String, Command> eventMap = new HashMap<>();
 
+    /**
+     * Automatically generates new auto choices from all pathplanner autos deployed to the bot
+     */
     public pathPlannerAutoHandler(LoggedDashboardChooser<Command> chooser, DifferentialDriveSuper differentialDrive) {
         this.differentialDrive = differentialDrive;
         this.autoChooser = chooser;

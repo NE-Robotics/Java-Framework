@@ -33,7 +33,7 @@ public class Robot extends LoggedRobot {
   public void robotInit() {
     robotContainer = new RobotContainer();
     initializeLogging();
-    PathPlannerServer.startServer(5811);
+    initializeLocalSevers(true);
     singleton = this;
   }
 
@@ -113,6 +113,9 @@ public class Robot extends LoggedRobot {
     powerSimulation();
   }
 
+  /**
+   * Simulates the bots power system, should be called periodically
+   */
   private void powerSimulation() {
     double drawCurrent = DifferentialDriveSim.driveSim.getCurrentDrawAmps();
     double loadedVoltage = BatterySim.calculateDefaultBatteryLoadedVoltage(drawCurrent);
@@ -121,6 +124,9 @@ public class Robot extends LoggedRobot {
     RoboRioSim.setVInVoltage(loadedVoltage);
   }
 
+  /**
+   * Begins AdvantageKit logging and metadata setup
+   */
   private void initializeLogging() {
     Logger logger = Logger.getInstance();
 
@@ -157,5 +163,15 @@ public class Robot extends LoggedRobot {
 
     // Start AdvantageKit logger
     logger.start();
+  }
+
+  /**
+   * Any servers used by the code should be initialized here including pathplanner,
+   * pathfinding servers, ML detection servers, & any others.
+   */
+  private void initializeLocalSevers(boolean testingServers) {
+    if(testingServers) {
+      PathPlannerServer.startServer(5811);
+    }
   }
 }

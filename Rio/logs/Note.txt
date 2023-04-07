@@ -1,0 +1,1 @@
+Logs that are created from sim will be located here if simulation logging is set true in the constants, please note logs on the real robot will attempt to write to the first flashdrive plugged in.
