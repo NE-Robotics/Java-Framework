@@ -39,5 +39,5 @@ python3 nt4-detector.py
 ```
 or
 ```
-python3 nt4-detector.py --model X --size 240, 240 --threshold 0.4 --roboRIO_IP 10.30.44.2
+python3 nt4-detector.py --model X --size 240, 240 --threshold 0.4 --roboRIO_IP 10.TE.AM.2
 ```
