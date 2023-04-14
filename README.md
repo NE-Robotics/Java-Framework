@@ -20,3 +20,6 @@ To begin with this framework just clone the repository & navigate to Rio/.wpilib
 If you are using WPILib vscode you may want to open the Rio folder while writing robot code instead of the primary folder as the FRC vscode extension does not always function properly if not in the correct directory.
 
 Simulation support is ready from the start with a basic differential drive sim but this can be swapped ti match your robot or planner robot.
+
+## Note 
+A similar but more advanced framework including 1000 hertz simulation with proper physics and wrappered systems based on work done by [gerth2](https://github.com/gerth2/SwerveBase2023) is under development, for anyone interested please let me know and early access to trial it will be opened up.
